@@ -8,14 +8,14 @@ import logoImg from '../../assets/logo.svg';
 
 import { Title, Form, Repositories, ErrorMessage } from './styles';
 
-interface Repository {
+type Repository = {
   full_name: string;
   description: string;
   owner: {
     login: string;
     avatar_url: string;
   };
-}
+};
 
 const Dashboard: React.FC = (): React.ReactElement => {
   const [repositories, setRepositories] = useState<Repository[]>(() => {
